@@ -4,9 +4,11 @@
 */
 
 const { response } = require('express');
-var cors = require('cors')
 
+//CORS SIRVE PARA RESTRINGIR ACCESOS 
+var cors = require('cors')
 require('dotenv').config()
+
 const express = require('express');
 const { dbConnection,dbConnection2 } = require('./database/config');
 
@@ -22,8 +24,6 @@ app.use(cors())
 
 //directorio publico
 app.use( express.static('public'))
-
-
 
 //Lectura y parseo del body
 app.use(express.json())
